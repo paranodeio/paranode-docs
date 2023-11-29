@@ -1,4 +1,4 @@
-# Website
+# Paranode Docs
 
 ### Installation
 
