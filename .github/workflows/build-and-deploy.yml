@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+        uses: actions/checkout@4
         with:
           persist-credentials: false
 
@@ -24,15 +24,15 @@ jobs:
           touch .env
 
       - name: Set up Node.js
-        uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e
+        uses: actions/setup-node@4
         with:
           node-version: 18
 
       - name: Install npm dependencies
-        run: yarn
+        run: npm install
 
       - name: Deploy 🚀
-        run: yarn build
+        run: npm run build
 
       - name: Prepare for staging deployment
         # if: ${{ vars.IS_STAGING == 'true' }}
@@ -42,9 +42,9 @@ jobs:
           echo "Disallow: /" >> out/robots.txt
 
       - name: Deploy 🚀
-        uses: jamesives/github-pages-deploy-action@e80c869f0057899fc2cd28819b5bbe9de890524a
+        uses: jamesives/github-pages-deploy-action@4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: github-page # The branch the action should deploy to.
+          BRANCH: github-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
