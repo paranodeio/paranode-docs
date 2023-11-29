@@ -23,13 +23,19 @@ jobs:
         run: |
           touch .env
 
-      - name: Install and Build 🔧
+      - name: Set up Node.js
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e
         with:
-          node-version: "18"
+          node-version: 18
 
-      - run: |
+      - name: Install npm dependencies
+        run: |
           npm install
+
+      - name: Deploy 🚀
+        env:
+          GIT_USER: ${{ github.actor }}
+        run: |
           npm run deploy
 
       - name: Prepare for staging deployment
