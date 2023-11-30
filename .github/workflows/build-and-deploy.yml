@@ -25,7 +25,7 @@ jobs:
       - name: Create production env file
         run: |
           touch .env
-          echo WALLET_CONNECT_ID=${{ vars.GA_TRACKING_ID }} >> .env
+          echo GA_TRACKING_ID=${{ vars.GA_TRACKING_ID }} >> .env
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
