@@ -34,12 +34,12 @@ jobs:
       - name: Deploy 🚀
         run: npm run build
 
-      - name: Prepare for staging deployment
-        # if: ${{ vars.IS_STAGING == 'true' }}
-        run: |
-          echo "docs.paranode.io" > out/CNAME
-          echo "User-Agent: *" > out/robots.txt
-          echo "Disallow: /" >> out/robots.txt
+      # - name: Prepare for staging deployment
+      #   # if: ${{ vars.IS_STAGING == 'true' }}
+      #   run: |
+      #     echo "docs.paranode.io" > out/CNAME
+      #     echo "User-Agent: *" > out/robots.txt
+      #     echo "Disallow: /" >> out/robots.txt
 
       - name: Deploy 🚀
         uses: jamesives/github-pages-deploy-action@4
