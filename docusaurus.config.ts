@@ -51,6 +51,10 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        gtag: {
+          trackingID: "G-R4ZSC10SFS",
+          anonymizeIP: true,
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -59,9 +63,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Paranode",
       logo: {
-        alt: "My Site Logo",
+        alt: "Paranode Logo",
         src: "img/logo.svg",
       },
       items: [
