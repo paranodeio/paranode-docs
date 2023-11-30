@@ -26,6 +26,7 @@ jobs:
         run: |
           touch .env
           echo GA_TRACKING_ID=${{ vars.GA_TRACKING_ID }} >> .env
+          echo DISCORD_INVITE=${{ vars.DISCORD_INVITE }} >> .env
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
