@@ -91,7 +91,7 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Documentation",
+              label: "Docs",
               to: "/docs/intro",
             },
           ],
@@ -126,6 +126,22 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        // language: ["en", "zh"],
+        // ```
+      },
+    ],
+  ],
 };
 
 export default config;
