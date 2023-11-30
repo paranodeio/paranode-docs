@@ -2,6 +2,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+import "dotenv/config";
+
 const config: Config = {
   title: "Paranode",
   tagline: "Dinosaurs are cool",
@@ -52,7 +54,7 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         gtag: {
-          trackingID: "G-R4ZSC10SFS",
+          trackingID: process.env.GA_TRACKING_ID,
           anonymizeIP: true,
         },
       } satisfies Preset.Options,
@@ -103,7 +105,7 @@ const config: Config = {
             },
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: process.env.DISCORD_INVITE,
             },
             {
               label: "Twitter",
@@ -116,12 +118,12 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/paranodeio",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Paranode`,
     },
     prism: {
       theme: prismThemes.github,

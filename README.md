@@ -1,5 +1,20 @@
 # Paranode Docs
 
+## Deployment
+
+Paranode Docs is hosted on GitHub pages.
+
+To deploy, create a Pull Request and merge on main to trigger deployment. It will build the website and push to the `gh-pages` branch to deploy it.
+
+## Config
+
+| Key            | Description                  |
+| -------------- | ---------------------------- |
+| GA_TRACKING_ID | Google Analytics tracking ID |
+| DISCORD_INVITE | Discord invitation link      |
+
+## Development
+
 ### Installation
 
 ```bash
@@ -21,22 +36,6 @@ npm run  build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
 # About
 
