@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
@@ -24,7 +24,7 @@ jobs:
           touch .env
 
       - name: Set up Node.js
-        uses: actions/setup-node@4
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -42,7 +42,7 @@ jobs:
       #     echo "Disallow: /" >> out/robots.txt
 
       - name: Deploy 🚀
-        uses: jamesives/github-pages-deploy-action@4
+        uses: jamesives/github-pages-deploy-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: github-pages # The branch the action should deploy to.
