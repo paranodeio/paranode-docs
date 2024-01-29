@@ -53,9 +53,12 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-        gtag: {
-          trackingID: process.env.GA_TRACKING_ID,
-          anonymizeIP: true,
+        // gtag: {
+        //   trackingID: process.env.GA_TRACKING_ID,
+        //   anonymizeIP: true,
+        // },
+        googleTagManager: {
+          containerId: "GTM-5W9HSRS9",
         },
       } satisfies Preset.Options,
     ],
@@ -64,6 +67,11 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: "Paranode",
       logo: {
@@ -75,7 +83,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "documentationSidebar",
           position: "left",
-          label: "Documentation",
+          label: "Docs",
         },
         {
           href: "https://github.com/paranodeio",
