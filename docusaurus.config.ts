@@ -53,13 +53,13 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-        // gtag: {
-        //   trackingID: process.env.GA_TRACKING_ID,
-        //   anonymizeIP: true,
-        // },
-        googleTagManager: {
-          containerId: "GTM-5W9HSRS9",
+        gtag: {
+          trackingID: process.env.GA_TRACKING_ID,
+          anonymizeIP: true,
         },
+        // googleTagManager: {
+        //   containerId: "GTM-5W9HSRS9",
+        // },
       } satisfies Preset.Options,
     ],
   ],
